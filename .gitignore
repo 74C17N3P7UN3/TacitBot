@@ -1,0 +1,8 @@
+# Build files
+dist
+
+# Dependencies
+node_modules
+
+# Dotenv file
+.env

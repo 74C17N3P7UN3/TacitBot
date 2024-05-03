@@ -1,0 +1,26 @@
+{
+   "name": "tacit-bot",
+   "version": "1.0.0",
+   "main": "dist/index.js",
+   "author": "TacitNeptune",
+   "scripts": {
+      "build": "rimraf dist && tsc",
+      "dev": "tsx watch --no-warnings=ExperimentalWarning src/index.ts",
+      "start": "tsx --no-warnings=ExperimentalWarning -r tsconfig-paths/register ."
+   },
+   "dependencies": {
+      "canvacord": "^6.0.2",
+      "commandkit": "^0.1.10",
+      "discord.js": "^14.14.1",
+      "dotenv": "^16.4.5",
+      "mongoose": "^8.3.3",
+      "pretty-ms": "^9.0.0"
+   },
+   "devDependencies": {
+      "@types/node": "^20.12.8",
+      "rimraf": "^5.0.5",
+      "tsconfig-paths": "^4.2.0",
+      "tsx": "^4.9.0",
+      "typescript": "^5.4.5"
+   }
+}
