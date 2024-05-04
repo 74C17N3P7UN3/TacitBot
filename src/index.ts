@@ -22,12 +22,7 @@ new CommandKit({
    devGuildIds: ['1234456702095720519'],
    devUserIds: ['566676482106064897'],
    // commandsPath: `${__dirname}/commands`,
-   // eventsPath: `${__dirname}/events`
-})
-
-client.on('ready', (client: Client<true>) => {
-   logger({ title: '✅ Bot', message: `${client.user.username} is online` })
-   console.log(`\n${'-'.repeat(40)}\n`)
+   eventsPath: `${__dirname}/events`
 })
 
 const start = async () => {
