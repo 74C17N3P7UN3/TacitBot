@@ -21,7 +21,7 @@ new CommandKit({
    bulkRegister: true,
    devGuildIds: ['1234456702095720519'],
    devUserIds: ['566676482106064897'],
-   // commandsPath: `${__dirname}/commands`,
+   commandsPath: `${__dirname}/commands`,
    eventsPath: `${__dirname}/events`
 })
 
