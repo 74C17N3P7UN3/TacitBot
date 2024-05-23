@@ -1,4 +1,4 @@
-export type LoggerType = {
+export type LogType = {
    title?: string
    message: string
 }

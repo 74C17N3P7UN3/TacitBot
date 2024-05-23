@@ -1,6 +1,6 @@
-import { LoggerType } from "@/types"
+import { LogType } from '@/types'
 
-export const logger = ({ title, message }: LoggerType) => {
+export const log = ({ title = 'console', message }: LogType) => {
    const formatTime = (time: number) => (time < 10) ? '0' + time : time
 
    const date = new Date()
@@ -9,5 +9,5 @@ export const logger = ({ title, message }: LoggerType) => {
    const ss = formatTime(date.getSeconds())
 
    const timeString = `[${hh}:${mm}:${ss}]`
-   console.log(`${timeString} ${title ?? 'Console'}: ${message}.`)
+   console.log(`${timeString} ${title}: ${message}.`)
 }

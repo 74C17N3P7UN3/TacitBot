@@ -1,9 +1,9 @@
 import { Client } from 'discord.js'
 
-import { logger } from '@/utils'
+import { log } from '@/utils'
 
 const onlineNotice = (client: Client<true>) => {
-   logger({ title: '✅ Bot', message: `${client.user.username} is online` })
+   log({ title: '✅ Bot', message: `${client.user.username} is online` })
    console.log(`\n${'-'.repeat(40)}\n`)
 }
 

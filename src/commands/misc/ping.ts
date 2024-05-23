@@ -4,7 +4,7 @@ import { embeds } from '@/utils'
 
 export const data: CommandData = {
    name: 'ping',
-   description: 'The bot\'s connection ping'
+   description: 'The bot\'s connection ping',
 }
 
 export const run = async ({ interaction }: SlashCommandProps) => {

@@ -1,28 +1,30 @@
 import { EmbedBuilder } from 'discord.js'
 
+import { colors } from '@/constants'
+
 const embedDefault = (command: string, message: string) =>
    new EmbedBuilder({
-      color: 0x456373,
+      color: colors.default,
       description: message,
-      title: command
+      title: command,
    })
 
 const embedError = (command: string, message: string) =>
    new EmbedBuilder({
-      color: 0xC0392B,
+      color: colors.red,
       description: message,
-      title: command
+      title: command,
    })
 
 const embedSuccess = (command: string, message: string) =>
    new EmbedBuilder({
-      color: 0x27AE60,
+      color: colors.green,
       description: message,
-      title: command
+      title: command,
    })
 
 export const embeds = {
    default: embedDefault,
    error: embedError,
-   success: embedSuccess
+   success: embedSuccess,
 }

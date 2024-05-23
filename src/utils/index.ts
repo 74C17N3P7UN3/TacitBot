@@ -1,4 +1,4 @@
 import { embeds } from './embeds'
-import { logger } from './misc'
+import { log } from './misc'
 
-export { embeds, logger }
+export { embeds, log }
