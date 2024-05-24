@@ -1,4 +1,8 @@
 import { embeds } from './embeds'
-import { log } from './misc'
+import { isAdmin, log } from './misc'
 
-export { embeds, log }
+export {
+   embeds,
+   isAdmin,
+   log
+}

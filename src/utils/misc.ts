@@ -1,4 +1,6 @@
-import { LogType } from '@/types'
+import { PermissionFlagsBits } from 'discord.js'
+
+import { GuildMemberType, LogType, PermissionsType } from '@/types'
 
 export const log = ({ title = 'console', message }: LogType) => {
    const formatTime = (time: number) => (time < 10) ? '0' + time : time
@@ -10,4 +12,9 @@ export const log = ({ title = 'console', message }: LogType) => {
 
    const timeString = `[${hh}:${mm}:${ss}]`
    console.log(`${timeString} ${title}: ${message}.`)
+}
+
+export const isAdmin = (guildMember: GuildMemberType) => {
+   const permissions = guildMember.permissions as PermissionsType
+   return permissions?.has(PermissionFlagsBits.Administrator) ?? false
 }
