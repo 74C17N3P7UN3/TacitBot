@@ -1,4 +1,5 @@
 import { CommandData, SlashCommandProps } from 'commandkit'
+import { ChannelType } from 'discord.js'
 
 import { embeds, isAdmin } from '@/utils'
 
@@ -8,9 +9,9 @@ export const data: CommandData = {
 }
 
 export const run = async ({ interaction }: SlashCommandProps) => {
-   // Check if the command is used in a server
-   if (!interaction.inGuild()) {
-      const embed = embeds.error('🏓 Ping', 'This command can only be used in a server.')
+   // Check if the command was used in a guild text channel
+   if (!interaction.inGuild() || interaction.channel?.type !== ChannelType.GuildText) {
+      const embed = embeds.error('🏓 Ping', 'This command can only be used in a guild text channel.')
       return await interaction.reply({ embeds: [embed], ephemeral: true })
    }
 
